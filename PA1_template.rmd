@@ -152,8 +152,7 @@ data7 <- filter(wkday,!is.na(wkday$steps)) %>% group_by (interval) %>%
 par(mfrow=c(1,2))
 plot(data6$totalxx, type="l", ylab="# of Steps",xlab="5 Minute Interval", main="Weekend Pattern")
 plot(data7$totalxx, type="l",ylab="# of Steps",xlab="5 Minute Interval",main="Weekday Pattern")
-dev.copy(png,'weekend.png')
-dev.off()
+
 ```
 ![Weekend Versus WeekDay](instructions_fig/weekend.png) 
 
