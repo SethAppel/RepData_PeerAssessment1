@@ -1,4 +1,4 @@
-knit2html("PA1_template.md")
+
 
 ---
 title: "PA1_template"
