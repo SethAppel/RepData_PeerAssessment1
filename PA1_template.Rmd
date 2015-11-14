@@ -1,10 +1,11 @@
-knit2html("PA1_template.rmd")
+
 
 ---
 title: "PA1_template"
 author: "Seth Appel"
 date: "November 13, 2015"
 output: html_document
+  keep_md:yes
 ---
 
 First we need to load two pacakges into our R environment to enable our analysis.   I will be using dplyr to quickly sort data and timedate to  enable some simple calendar sorting functions.
