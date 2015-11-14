@@ -43,6 +43,10 @@ medianx <- median(data2$totalx)
 print(paste("Mean of total steps:",round(meanx)))
 print(paste("Median of total steps:",medianx))     
 ```
+[1] "Mean of total steps: 10766"
+[1] "Median of total steps: 10765"
+
+
 Now let us do a plot showing the mean number of steps across the entire data set for each five minute interval  Might be interesting to see when people get active 
 
 
@@ -66,6 +70,8 @@ maxx <- which.max(data3$totalxx)
 print(paste("Most Active Interval is",data3[maxx,1],"with",round(data3[maxx,2]),"steps"))
 ```
 
+[1] "Most Active Interval is 835 with 206 steps"
+
 But perhaps a lot of missing data is distorting our findings
 How much of the data is actually missing
 
@@ -77,6 +83,10 @@ print(paste("Total length of the data set is",all,"observations."))
 print(paste("There are",missing,"observations with missing data (NA)"))
 print(paste(round(missing/all,2),"of the obs are missing data"))
 ```
+[1] "Total length of the data set is 17568 observations."
+[1] "There are 2304 observations with missing data (NA)"
+[1] "0.13 of the obs are missing data"
+
 
 That is a good deal of missing data  I am going to replace those missing values by replacing each missing point with the average across the entire five minute interval that we created earlier
 
@@ -116,7 +126,8 @@ print(paste("Mean of total steps (missing obs replaced):",round(meanxx)))
 print(paste("Median of total steps:(missing obs replaced):",medianxx))  
 
 ```
-
+[1] "Mean of total steps (missing obs replaced): 10766"
+[1] "Median of total steps:(missing obs replaced): 10765"
 
 Now let us see if bundling all the days of the week together has been distorting some key findings.  We will need to create a simple test for weekend or weekdays and sort the data accordingly
 
