@@ -1,4 +1,4 @@
-knit2html("my_report.rmd")
+knit2html("PA1_template.rmd")
 
 ---
 title: "PA1_template"
