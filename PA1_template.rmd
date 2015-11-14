@@ -27,6 +27,8 @@ data2 <- data %>% group_by (date) %>%
 data2 <- filter(data2, !is.na(data2$total))  ## Removing rows with missing values
 hist(data2$totalx,main="Histogram of Total Steps Per Day", 
      xlab="Steps")
+dev.copy(png,'totalsteps.png')
+dev.off()
 ```
 
 Very close to a classic bell curve  I guess there is a normal distibution of activity ranging from coach potatoes to outdoorsy types
@@ -50,6 +52,8 @@ Now let us do a plot showing the mean number of steps across the entire data set
 data3 <- filter(data,!is.na(data$steps)) %>% group_by (interval) %>%
 summarise(totalxx=mean(steps),na.rm=TRUE)
 plot(data3$totalxx, type="l")
+dev.copy(png,'fivemins.png')
+dev.off()
 ```
 Wow There is an interesting spike in activity in the middle of our plot followed by various smaller jumps tapering off until our sample population seems to be watching TV before finally falling asleep
 
@@ -94,6 +98,8 @@ data5 <- data4 %>% group_by (date) %>%
 data5 <- filter(data2, !is.na(data2$total))
 hist(data5$totalx,main="Histogram of Total Steps Per Day with Missing Data Inputed", 
      xlab="Steps")
+dev.copy(png,'fiveminsalldata.png')
+dev.off()
 
 ```
 
@@ -146,7 +152,8 @@ data7 <- filter(wkday,!is.na(wkday$steps)) %>% group_by (interval) %>%
 par(mfrow=c(1,2))
 plot(data6$totalxx, type="l", ylab="# of Steps",xlab="5 Minute Interval", main="Weekend Pattern")
 plot(data7$totalxx, type="l",ylab="# of Steps",xlab="5 Minute Interval",main="Weekday Pattern")
-
+dev.copy(png,'weekend.png')
+dev.off()
 ```
 
 We can see an initial morning burst of activity for everyday, but on the weekdays people hunker down by their desks and are pretty sedentar.
