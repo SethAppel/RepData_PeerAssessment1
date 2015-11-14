@@ -1,3 +1,5 @@
+knit2html("my_report.rmd")
+
 ---
 title: "PA1_template"
 author: "Seth Appel"
